@@ -66,8 +66,6 @@ export default function Registro() {
                            router.push("/inicio-sesion");
                         }, 2000);
                      }
-
-                     console.log(result);
                   }}
                   className="mt-6 flex flex-col gap-4"
                   action=""
