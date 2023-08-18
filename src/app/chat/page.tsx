@@ -38,16 +38,16 @@ export default function Chat() {
    }, []);
 
    return (
-      <main>
-         <div>
-            <ul className="flex p-8 mb-16 flex-col gap-4">
+      <main className="w-full">
+         <div className="w-full">
+            <ul className="flex w-full box-border p-8 mb-16 flex-col gap-4">
                {messages.length === 0 ? (
                   <div>Aún no hay mensajes</div>
                ) : (
                   messages.map((message: any, i) =>
                      message.username === session?.user?.name ? (
                         <li
-                           className="bg-white text-black justify-self-end self-end flex flex-col w-fit p-4 rounded-md"
+                           className="bg-white text-black max-w-xl justify-self-end self-end flex flex-col w-fit p-4 rounded-md"
                            key={`message_${i}`}
                         >
                            <span>{message.username}:</span>
