@@ -55,7 +55,7 @@ export default function Chat() {
                         </li>
                      ) : (
                         <li
-                           className="bg-red-700 justify-self-end flex flex-col w-fit p-4 rounded-md"
+                           className="bg-red-700 max-w-md justify-self-end flex flex-col w-fit p-4 rounded-md"
                            key={`message_${i}`}
                         >
                            <span>{message.username}:</span>
