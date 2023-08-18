@@ -83,11 +83,14 @@ export default function Chat() {
                      message: messageInput,
                   });
                }
+
+               setMessageInput("");
             }}
             className="fixed bg-red-950 flex bottom-0 left-0 right-0"
             action=""
          >
             <input
+               value={messageInput}
                onChange={(e: ChangeEvent<HTMLInputElement>) => {
                   setMessageInput(e.target.value);
                }}
