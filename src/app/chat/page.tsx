@@ -47,19 +47,19 @@ export default function Chat() {
                   messages.map((message: any, i) =>
                      message.username === session?.user?.name ? (
                         <li
-                           className="bg-white text-black max-w-xl justify-self-end self-end flex flex-col w-fit p-4 rounded-md"
+                           className="bg-white text-black max-w-[240px] justify-self-end self-end flex flex-col w-full p-4 rounded-md"
                            key={`message_${i}`}
                         >
                            <span>{message.username}:</span>
-                           <p>{message.message}</p>
+                           <p className="break-words">{message.message}</p>
                         </li>
                      ) : (
                         <li
-                           className="bg-red-700 max-w-md justify-self-end flex flex-col w-fit p-4 rounded-md"
+                           className="bg-red-700 max-w-[240px] justify-self-end flex flex-col w-full p-4 rounded-md"
                            key={`message_${i}`}
                         >
                            <span>{message.username}:</span>
-                           <p>{message.message}</p>
+                           <p className="break-words">{message.message}</p>
                         </li>
                      )
                   )
